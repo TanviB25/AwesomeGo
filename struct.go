@@ -5,15 +5,19 @@ import (
 )
 
 type Style struct {
-	body_size string
-	price     int
-	bname     []string
+	bsize []string
+	price int
+	bname []string
 }
 
 func main() {
 	myCloset := Style{
-		body_size: "XL",
-		price:     300,
+		bsize: []string{
+			"XL",
+			"M",
+			"XS",
+		},
+		price: 300,
 		bname: []string{
 			"Zara",
 			"Forever21",
@@ -21,6 +25,8 @@ func main() {
 		},
 	}
 	fmt.Println(myCloset)
+	fmt.Println(myCloset.bsize[1])
+	fmt.Println(myCloset.price)
 	//fmt.Printf(myCloset.price)
 	//fmt.Printf(myCloset.bname[])
 	fmt.Printf(myCloset.bname[2])
